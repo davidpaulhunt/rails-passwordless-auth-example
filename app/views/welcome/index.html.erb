@@ -1,0 +1,15 @@
+<% if @current_user %>
+<h1>Welcome to the world of passwordless authentication, <%= @current_user.name || 'Friend' %>!</h1>
+From here, you can:
+<ul>
+  <li><%= link_to 'Request a new signin link', signin_path %></li>
+  <li><%= link_to 'or Signout', signout_path %></li>
+</ul>
+<% else %>
+  <h1>Welcome to the world of passwordless authentication, Friend!</h1>
+  From here, you can:
+  <ul>
+    <li><%= link_to 'Signup for a test drive', signup_url %></li>
+    <li><%= link_to 'Or signin if you have an account', signin_path %>
+  </ul>
+<% end %>

@@ -1,0 +1,8 @@
+Hi <%= @token.user.name.present? ? @token.user.name : 'Friend' %>!
+
+You're almost signed in. Just follow the link below and you're all set.
+
+<%= "http://localhost:3000/signin/#{@token.token}" %>
+
+Thanks so much!
+- Lnk.UK
